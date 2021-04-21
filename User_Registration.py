@@ -11,6 +11,13 @@ print("Do you want to login? Login ")
 
 new_user = input("Enter your option here: ")
 
+if new_user == "Yes":
+    new_regis()
+elif new_user == "Login":
+    login_opt()
+    
+else:
+    print("Please enter proper input")
 
 def new_regis():
     db = conn.Music 
@@ -96,3 +103,5 @@ def new_regis():
     merge(u)-[x:has]->(p)
     """
     graph.run(query)
+    
+    
